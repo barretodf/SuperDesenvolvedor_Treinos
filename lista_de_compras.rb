@@ -4,7 +4,7 @@ loop do
     puts "Digite um produto para a lista ou (sair):"
         item = gets.chomp
 
-        break if item == "sair" 
+        break if item.downcase == "sair" 
         lista_de_compras << item
     end
 
