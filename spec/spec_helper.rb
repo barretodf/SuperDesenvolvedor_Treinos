@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # spec/spec_helper.rb
 
 # Adiciona a pasta 'lib' ao $LOAD_PATH para que o Ruby consiga encontrar o arquivo 'nomeshow.rb'
