@@ -30,4 +30,7 @@ module NomeShow
     titulos = titulos_cartesianos   # Gera todas as combinações
     titulos.sample                  # Escolhe uma aleatoriamente
   end
+
+  
+
 end
