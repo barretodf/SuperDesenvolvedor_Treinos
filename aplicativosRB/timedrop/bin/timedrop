@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+require_relative "../lib/timedrop"
+
+def parse_time(input)
+  total_seconds = 0
+  matches = input.scan(/(\d+)(h|m|s)/) # Captura números seguidos de "h", "m" ou "s"
+  
+  matches.each do |amount, unit|
+    case unit
+    when "h" then total_seconds += amount.to_i * 3600 # Horas para segundos
+    when "m" then total_seconds += amount.to_i * 60   # Minutos para segundos
+    when "s" then total_seconds += amount.to_i        # Segundos
+    end
+  end
+
+  total_seconds
+end
+
+if ARGV.empty?
+  puts "Uso: timedrop <tempo>"
+  puts "Exemplo: timedrop 2h30m"
+  exit 1
+end
+
+seconds = parse_time(ARGV[0])
+timer = TimeDrop::Timer.new(seconds)
+timer.start
