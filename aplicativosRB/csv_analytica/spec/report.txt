@@ -1,0 +1,11 @@
+Relatório de Análise CSV
+----------------------------------
+Estatísticas da coluna 'idade':
+  Média: 20.0
+  Mediana: 20.0
+  Moda: [15, 25]
+  Desvio Padrão: 5.0
+
+Estatísticas da coluna 'nome':
+  Valores únicos: ["Pedro", "Alice"]
+  Frequências: {"Pedro"=>1, "Alice"=>1}
