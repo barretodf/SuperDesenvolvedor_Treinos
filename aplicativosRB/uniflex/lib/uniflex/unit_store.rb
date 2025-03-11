@@ -1,6 +1,6 @@
 module UniFlex
   class UnitStore
-    # Um hash que armazena as unidades e seus fatores
+    
     @units = {
       meters: { base: :meters, factor: 1.0 },
       kilometers: { base: :meters, factor: 0.001 },
@@ -10,12 +10,11 @@ module UniFlex
     }
 
     class << self
-      # Método para adicionar unidades personalizadas
+      
       def add_custom_unit(name, base:, factor:)
         @units[name] = { base: base, factor: factor }
       end
 
-      # Método para obter uma unidade pelo nome
       def get_unit(name)
         @units[name]
       end

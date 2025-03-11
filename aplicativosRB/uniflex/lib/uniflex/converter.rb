@@ -12,14 +12,14 @@ module UniFlex
       raise ArgumentError, "Unidade '#{to}' desconhecida" unless to_unit
       raise ArgumentError, "Não é possível converter entre bases diferentes" unless from_unit[:base] == to_unit[:base]
 
-      # Conversão especial para temperatura
+      
       if from_unit[:base] == :celsius
         return convert_temperature(value, from, to)
       end
 
       result = (value / from_unit[:factor]) * to_unit[:factor]
 
-      # Exibe a mensagem de conversão
+      
       puts "Conversão: #{value} #{from} -> #{result} #{to}"
 
       result
